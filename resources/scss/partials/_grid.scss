@@ -1,0 +1,68 @@
+.container--wide {
+  padding: 0 40px;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1860px;
+  margin: 0 auto;
+}
+
+// Define the breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1480px,
+);
+
+// Define the max-width for each breakpoint
+$max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px,
+);
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  position: relative;
+
+  &.inner {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @each $breakpoint, $container-max-width in $max-widths {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+.container--large {
+  @extend .container;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @each $breakpoint, $container-max-width in $max-widths {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      max-width: $container-max-width + 150;
+    }
+  }
+}
+
+// For fluid containers
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}

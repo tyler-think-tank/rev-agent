@@ -1,0 +1,9 @@
+$colors: (
+  "placeholder": "#8B97A2",
+);
+
+:root {
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+}

@@ -1,0 +1,81 @@
+@import "./fonts/fonts";
+@import "./variables/colors";
+@import "./mixins/mixins";
+@import "./partials/grid";
+
+// import aos SCSS from node_modules
+@import "~aos/src/sass/aos";
+
+// import select2
+@import "~select2/dist/css/select2";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: proxima-nova, sans-serif;
+  min-height: 100vh;
+  background: var(--primary);
+}
+
+h1,
+.h1 {
+  font-size: 62px;
+  @include mobile {
+    font-size: 42px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 38px;
+
+  @include mobile {
+    font-size: 26px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 28px;
+  @include mobile {
+    font-size: 22px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 21px;
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-family: proxima-nova, sans-serif;
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+
+  @include mobile {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
