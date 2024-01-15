@@ -9,3 +9,10 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Rev Agent
 */
+
+@font-face {
+  font-family: "IA Writer Duospace";
+  src: url("dist/assets/fonts/iAWriterDuospace-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

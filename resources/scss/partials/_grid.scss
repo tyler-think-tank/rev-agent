@@ -33,9 +33,15 @@ $max-widths: (
   box-sizing: border-box;
   position: relative;
 
-  &.inner {
-    padding-left: 40px;
-    padding-right: 40px;
+  &-inner {
+    @extend .container;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    @include mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   @each $breakpoint, $container-max-width in $max-widths {

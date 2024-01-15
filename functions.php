@@ -37,10 +37,8 @@ add_action( 'init', 'register_my_menus' );
 function generateButton($text, $link, $customClasses = '', $target = '_self', $ariaLabel = '') {
     $class = 'button ' . $customClasses;
     $targetAttr = $target ? 'target="' . $target . '"' : '';
-    $ariaLabelAttr = $ariaLabel ? 'aria-label="' . $ariaLabel . '"' : '';
-    $svg = svg('chev-right', ['alt' => 'Chevron right'], false);
-    
-    return '<a href="' . $link . '" class="' . $class . '" ' . $targetAttr . ' role="button" ' . $ariaLabelAttr . '>' . $text . $svg . '</a>';
+    $ariaLabelAttr = $ariaLabel ? 'aria-label="' . $ariaLabel . '"' : '';    
+    return '<a href="' . $link . '" class="' . $class . '" ' . $targetAttr . ' role="button" ' . $ariaLabelAttr . '>' . $text . '</a>';
 }
 
 

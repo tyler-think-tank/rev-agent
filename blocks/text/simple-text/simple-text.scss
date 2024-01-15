@@ -1,0 +1,32 @@
+.simple-text {
+  padding: 7rem 0;
+  box-sizing: border-box;
+
+  p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &--title {
+    margin-top: 0;
+
+    &.text-left {
+      text-align: left;
+    }
+    &.text-center {
+      text-align: center;
+    }
+    &.text-right {
+      text-align: right;
+    }
+  }
+
+  &--content {
+    > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

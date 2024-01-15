@@ -2,6 +2,8 @@
 @import "./variables/colors";
 @import "./mixins/mixins";
 @import "./partials/grid";
+@import "./partials/header";
+@import "./partials/footer";
 
 // import aos SCSS from node_modules
 @import "~aos/src/sass/aos";
@@ -13,13 +15,11 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   box-sizing: border-box;
   position: relative;
-  font-family: proxima-nova, sans-serif;
-  min-height: 100vh;
-  background: var(--primary);
+  font-family: "Nunito Sans", sans-serif;
 }
 
 h1,
@@ -32,10 +32,12 @@ h1,
 
 h2,
 .h2 {
-  font-size: 38px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
 
   @include mobile {
-    font-size: 26px;
+    font-size: 34px;
   }
 }
 
@@ -79,3 +81,74 @@ h4,
     max-width: 100%;
   }
 }
+
+.button {
+  all: unset;
+  color: var(--white);
+  background: var(--secondary);
+  padding: 10px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  min-width: 75px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: lighten(#00d08b, 3%);
+  }
+}
+
+form {
+  input {
+    font-family: "Nunito Sans", sans-serif;
+    &[type="submit"] {
+      @extend .button;
+    }
+  }
+  textarea {
+    font-family: "Nunito Sans", sans-serif;
+  }
+}
+
+.bg-green,
+.bg-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.bg-primary,
+.bg-grey {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.bg-light-grey {
+  background: var(--light-grey);
+  color: var(--primary);
+}
+
+.bg-white {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* BEGIN: Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lighten(#00d08b, 10%);
+}
+/* END: Scrollbar */

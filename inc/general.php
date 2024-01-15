@@ -35,6 +35,10 @@ function custom_scripts() {
         wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/dist/assets/js/global.js', array( 'jquery' ), '1.0.0', true );
     }
 
+    else {
+        wp_enqueue_style( 'custom-styles-admin', get_stylesheet_directory_uri() . '/dist/assets/css/global-backend.css', array(), '1.0.0', 'all' );
+    }
+
 
     wp_localize_script('main', 'ajax_params', array('ajax_url' => admin_url('admin-ajax.php')));
 

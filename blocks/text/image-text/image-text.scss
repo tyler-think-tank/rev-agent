@@ -1,0 +1,42 @@
+@import "../../../resources/scss/mixins/mixins";
+
+.image-text {
+  padding: 7rem 0;
+  box-sizing: border-box;
+
+  &--inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--text {
+    flex: 0 0 33%;
+    @include mobile {
+      flex: 0 0 100%;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  }
+
+  &--image {
+    flex: 0 0 60%;
+    @include mobile {
+      flex: 0 0 100%;
+    }
+
+    picture,
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

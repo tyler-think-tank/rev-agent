@@ -75,4 +75,51 @@ html :where(.wp-block) {
       max-width: 100%;
     }
   }
+
+  .button {
+    all: unset;
+    color: var(--white);
+    background: var(--secondary);
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    min-width: 75px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  form {
+    input {
+      font-family: "Nunito Sans", sans-serif;
+      &[type="submit"] {
+        @extend .button;
+      }
+    }
+    textarea {
+      font-family: "Nunito Sans", sans-serif;
+    }
+  }
+
+  .bg-green,
+  .bg-secondary {
+    background: var(--secondary);
+    color: var(--primary);
+  }
+
+  .bg-primary,
+  .bg-grey {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  .bg-light-grey {
+    background: var(--light-grey);
+    color: var(--primary);
+  }
+
+  .bg-white {
+    background: var(--white);
+    color: var(--primary);
+  }
 }
